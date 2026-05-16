@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.jpg";
+import logo from "../assets/images/logo1.png";
 import "./Footer.css";
 
 export default function Footer() {
@@ -39,15 +39,15 @@ export default function Footer() {
         <div className="footer__col">
           <h3 className="footer__heading">Contact</h3>
           <address className="footer__address">
-            <p>12 Craftsman Street, Industrial Layout</p>
-            <p>Bengaluru, Karnataka 560001</p>
+            <p>Thorrur 500163</p>
+            <p>Mahabubabd, Telangana</p>
             <p>
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <a href="tel:+919949453139">+91 9949453139</a>
             </p>
             <p>
-              <a href="mailto:hello@venkateshwarawood.in">hello@venkateshwarawood.in</a>
+              <a href="mailto:gajjelaakhil39@gmail.com.in">gajjelaakhil39@gmail.com.in</a>
             </p>
-            <p className="footer__hours">Mon–Sat: 9:00 AM – 7:00 PM</p>
+            <p className="footer__hours">Mon–Sun: 9:00 AM – 7:00 PM</p>
           </address>
         </div>
       </div>

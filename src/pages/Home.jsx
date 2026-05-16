@@ -33,7 +33,7 @@ const testimonials = [
     quote:
       "Our modular kitchen and dining set transformed the home. Finish and punctuality were excellent.",
     name: "Priya N.",
-    role: "Homeowner, Bengaluru",
+    role: "Homeowner, warangal",
   },
   {
     quote:

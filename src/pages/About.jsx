@@ -1,12 +1,12 @@
 import RevealSection from "../components/RevealSection.jsx";
-import owner from "../assets/images/owner.jpg";
+import owner from "../assets/images/owner.jpeg";
 import "./About.css";
 
 const milestones = [
-  { year: "2008", title: "Workshop founded", text: "Started as a local carpentry unit focusing on teak and PVC wood hybrids." },
+  { year: "1999", title: "Workshop founded", text: "Started as a local carpentry unit focusing on teak and PVC wood hybrids." },
   { year: "2013", title: "PVC specialization", text: "Invested in modern edge-banding and modular systems for homes." },
   { year: "2018", title: "Retail & custom", text: "Expanded to full home packages — beds, sofas, kitchens, and doors." },
-  { year: "2024", title: "Regional trust", text: "Serving families and businesses across Karnataka with consistent quality." },
+  { year: "2024", title: "Regional trust", text: "Serving families and businesses across Telangana with consistent quality." },
 ];
 
 const values = [
@@ -40,7 +40,12 @@ export default function About() {
       <section className="about__story">
         <div className="about__container about__story-grid">
           <RevealSection as="div" className="about__story-img-wrap">
-            <img src={owner} alt="Craftsperson at work in the wood workshop" className="about__story-img" />
+            <img
+              src={owner}
+              alt="Craftsperson at work in the wood workshop"
+              className="about__story-img"
+              style={{ width: "100%", height: "100%" }}
+            />
           </RevealSection>
           <RevealSection as="div" className="about__story-text">
             <h2>Rooted in craftsmanship</h2>

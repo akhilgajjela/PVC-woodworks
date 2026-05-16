@@ -16,69 +16,110 @@ export default function Contact() {
 
   const onChange = (e) => {
     const { name, value } = e.target;
-    setForm((f) => ({ ...f, [name]: value }));
+
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
+
     setSubmitted(true);
+
+    setForm(initialForm);
+
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
   };
 
   return (
     <div className="contact">
+      {/* Intro Section */}
       <section className="contact__intro">
         <div className="contact__container">
           <h1 className="contact__title">Contact</h1>
+
           <p className="contact__lead">
-            Visit us, call, or send a message — we will get back with estimates and lead times.
+            Visit us, call, or send a message — we will get back
+            with estimates and lead times.
           </p>
         </div>
       </section>
 
+      {/* Main Section */}
       <section className="contact__main">
         <div className="contact__container contact__split">
+
+          {/* Contact Info */}
           <RevealSection as="div" className="contact__info">
-            <h2 className="contact__heading">Visit & reach us</h2>
+            <h2 className="contact__heading">
+              Visit & Reach Us
+            </h2>
+
             <address className="contact__address">
               <p>
                 <strong>Address</strong>
                 <br />
-                12 Craftsman Street, Industrial Layout
+                Thorrur 506163
                 <br />
-                Bengaluru, Karnataka 560001
+                Mahabubabad, Telangana
               </p>
+
               <p>
                 <strong>Phone</strong>
                 <br />
-                <a href="tel:+919876543210">+91 98765 43210</a>
+                <a href="tel:+919949453139">
+                  +91 9949453139
+                </a>
               </p>
+
               <p>
                 <strong>Email</strong>
                 <br />
-                <a href="mailto:hello@venkateshwarawood.in">hello@venkateshwarawood.in</a>
+                <a href="mailto:gajjelaakhil39@gmail.com">
+                  gajjelaakhil39@gmail.com
+                </a>
               </p>
+
               <p>
-                <strong>Working hours</strong>
+                <strong>Working Hours</strong>
                 <br />
-                Monday – Saturday: 9:00 AM – 7:00 PM
-                <br />
-                Sunday: Closed
+                Monday – Sunday: 9:00 AM – 7:00 PM
+                
               </p>
             </address>
           </RevealSection>
 
-          <RevealSection as="div" className="contact__form-wrap">
-            <h2 className="contact__heading">Send an enquiry</h2>
-            {submitted ? (
+          {/* Contact Form */}
+          <RevealSection
+            as="div"
+            className="contact__form-wrap"
+          >
+            <h2 className="contact__heading">
+              Send an Enquiry
+            </h2>
+
+            {submitted && (
               <p className="contact__success" role="status">
-                Thank you, {form.name || "friend"}. We have received your message and will contact you
-                shortly.
+                Thank you, {form.name || "friend"}.
+                We have received your message and
+                will contact you shortly.
               </p>
-            ) : null}
-            <form className="contact__form" onSubmit={onSubmit} noValidate>
+            )}
+
+            <form
+              className="contact__form"
+              onSubmit={onSubmit}
+            >
+              {/* Name */}
               <label className="contact__field">
                 <span>Name</span>
+
                 <input
+                  type="text"
                   name="name"
                   value={form.name}
                   onChange={onChange}
@@ -86,53 +127,98 @@ export default function Contact() {
                   autoComplete="name"
                 />
               </label>
+
+              {/* Phone */}
               <label className="contact__field">
                 <span>Phone</span>
+
                 <input
-                  name="phone"
                   type="tel"
+                  name="phone"
                   value={form.phone}
                   onChange={onChange}
+                  required
                   autoComplete="tel"
                 />
               </label>
+
+              {/* Email */}
               <label className="contact__field">
                 <span>Email</span>
+
                 <input
-                  name="email"
                   type="email"
+                  name="email"
                   value={form.email}
                   onChange={onChange}
+                  required
                   autoComplete="email"
                 />
               </label>
+
+              {/* Product */}
               <label className="contact__field">
-                <span>Product / interest</span>
+                <span>Product / Interest</span>
+
                 <input
+                  type="text"
                   name="product"
                   value={form.product}
                   onChange={onChange}
-                  placeholder="e.g. King bed, shop counter"
+                  placeholder="e.g. PVC wardrobe, TV unit"
                 />
               </label>
+
+              {/* Message */}
               <label className="contact__field contact__field--full">
                 <span>Message</span>
-                <textarea name="message" value={form.message} onChange={onChange} rows={4} />
+
+                <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={onChange}
+                  rows={5}
+                  required
+                />
               </label>
-              <button type="submit" className="contact__submit">
-                Submit enquiry
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="contact__submit"
+              >
+                Submit Enquiry
               </button>
             </form>
           </RevealSection>
         </div>
       </section>
 
+      {/* Map Section */}
       <section className="contact__map-section">
         <div className="contact__container">
-          <h2 className="contact__map-title">Find us</h2>
-          <RevealSection as="div" className="contact__map-placeholder">
-            <p>Map area — embed Google Maps or your preferred provider here.</p>
-            <p className="contact__map-hint">12 Craftsman Street · Bengaluru</p>
+          <h2 className="contact__map-title">
+            Find Us
+          </h2>
+
+          <RevealSection
+            as="div"
+            className="contact__map-placeholder"
+          >
+            <iframe
+              title="Google Map"
+              src="https://www.google.com/maps/embed?pb="
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+            <p className="contact__map-hint">
+              Thorrur 506163 · Mahabubabad, Telangana
+            </p>
           </RevealSection>
         </div>
       </section>

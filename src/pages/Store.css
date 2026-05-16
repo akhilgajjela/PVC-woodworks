@@ -1,0 +1,159 @@
+.store__intro {
+  padding: 3rem 0 2rem;
+  background: linear-gradient(180deg, rgba(62, 31, 0, 0.05) 0%, transparent 100%);
+}
+
+.store__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.store__title {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin: 0 0 0.75rem;
+}
+
+.store__lead {
+  margin: 0 0 1.75rem;
+  max-width: 700px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(62, 31, 0, 0.88);
+}
+
+.store__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.store__tab {
+  padding: 0.55rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border: 2px solid rgba(62, 31, 0, 0.15);
+  border-radius: 999px;
+  background: #fffef8;
+  color: var(--color-teak);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.store__tab:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.store__tab--active {
+  background: var(--color-teak);
+  color: var(--color-cream);
+  border-color: var(--color-teak);
+}
+
+.store__grid-section {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+  padding: 1rem 0 4.5rem;
+}
+
+.store__count {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: rgba(62, 31, 0, 0.8);
+}
+
+.store__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.store__card {
+  background: #fffef8;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(62, 31, 0, 0.08);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.store__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lift);
+}
+
+.store__card-img-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: rgba(62, 31, 0, 0.06);
+}
+
+.store__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.store__card:hover .store__card-img {
+  transform: scale(1.05);
+}
+
+.store__card-body {
+  padding: 1.25rem 1.35rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.35rem;
+}
+
+.store__card-cat {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.store__card-name {
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.store__card-desc {
+  margin: 0;
+  flex: 1;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(62, 31, 0, 0.85);
+}
+
+.store__enquire {
+  align-self: flex-start;
+  margin-top: 0.85rem;
+  padding: 0.65rem 1.25rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--color-teak);
+  background: var(--color-gold);
+  border-radius: 6px;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.store__enquire:hover {
+  background: var(--color-gold-hover);
+  color: var(--color-teak);
+  transform: translateY(-2px);
+}
